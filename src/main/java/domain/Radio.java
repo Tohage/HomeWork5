@@ -24,20 +24,17 @@ public class Radio {
     }
 
     public void increaseStation() {
-        int newCurrentStation = 0;
-        if (currentStation < 9) {
-            currentStation = currentStation + 1;
-        }
-        if (currentStation >= 9) {
-            currentStation = newCurrentStation;
-        }
         if (currentStation <= 0) {
             setCurrentStation(currentStation);
         }
+            currentStation = currentStation + 1;
+        if (currentStation > 9) {
+            currentStation = 0;
+        }
+
     }
 
     public void reduceStation() {
-        //int newCurrentStation1 = 9;
         if (currentStation <= 0) {
             currentStation = 9;
         }

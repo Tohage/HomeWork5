@@ -123,6 +123,33 @@ public class RadioTests {
     }
 
     @Test
+    void changeStationIncreaseBelowMax() {
+        Radio st = new Radio();
+
+        st.setCurrentStation(8);
+
+        st.increaseStation();
+
+        int actual = st.getCurrentStation();
+        int expected = 9;
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    void changeStationIncrease123() {
+        Radio st = new Radio();
+
+        st.setCurrentStation(20);
+
+        st.increaseStation();
+
+        int actual = st.getCurrentStation();
+        int expected = 1;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void changeStationReduce() {
         Radio st = new Radio();
 
