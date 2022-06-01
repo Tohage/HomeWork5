@@ -135,6 +135,7 @@ public class RadioTests {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void changeStationIncrease123() {
         Radio st = new Radio();
@@ -176,6 +177,7 @@ public class RadioTests {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void changeStationReduceAboveMax() {
         Radio st = new Radio();

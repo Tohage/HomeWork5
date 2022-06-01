@@ -1,15 +1,11 @@
 package domain;
 
 public class Radio {
-
     private int currentStation;
-
-
     private int currentVolume;
 
     public int getCurrentStation() {
         return currentStation;
-
     }
 
     public void setCurrentStation(int currentStation) {
@@ -20,18 +16,16 @@ public class Radio {
             currentStation = 0;
         }
         this.currentStation = currentStation;
-
     }
 
     public void increaseStation() {
         if (currentStation <= 0) {
             setCurrentStation(currentStation);
         }
-            currentStation = currentStation + 1;
+        currentStation = currentStation + 1;
         if (currentStation > 9) {
             currentStation = 0;
         }
-
     }
 
     public void reduceStation() {
@@ -39,7 +33,6 @@ public class Radio {
             currentStation = 9;
         }
         currentStation -= 1;
-
     }
 
     public int getCurrentVolume() {
